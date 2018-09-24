@@ -27,13 +27,14 @@
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     
     /**
-     2、用xib文件创建视图控制器：在项目中创建一个可视化的Empty文件，这个文件的名称以.xib为结尾，然后在这个文件中拖入view控件并且设置文件的拥有者(File’s Owner)为一个视图控制器，然后就要把这个文件拥有者的view属性和文件中的view控件进行连线。上述的意思是要确定.xib文件是代表某一个视图控制器并且文件里面的view控件代表的是这个视图控制器的视图；
+     2、用xib文件创建视图控制器：
+     在项目中创建一个可视化的Empty文件，这个文件的名称以.xib为结尾，然后在这个文件中拖入view控件并且设置文件的拥有者(File’s Owner)为一个视图控制器，然后就要把这个文件拥有者的view属性和文件中的view控件进行连线。上述的意思是要确定.xib文件是代表某一个视图控制器并且文件里面的view控件代表的是这个视图控制器的视图；
      下面方法中的bundle:后面的参数也可以写为nil。
      */
     ViewController *viewController = [[ViewController alloc] initWithNibName:@"ViewController" bundle:[NSBundle mainBundle]];
     
     /**
-     3、用上面创建的视图控制器来充当窗口的根视图控制器，然后使窗口成为主窗口并且显示出来。
+     3、用上面创建的视图控制器来做窗口的根视图控制器，然后使窗口成为主窗口并显示出来：
      */
     self.window.rootViewController = viewController;
     [self.window makeKeyAndVisible];
