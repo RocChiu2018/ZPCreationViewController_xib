@@ -21,9 +21,7 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     
-    /**
-     1、创建窗口：
-     */
+    //1、创建程序的窗口：
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     
     /**
@@ -33,10 +31,10 @@
      */
     ViewController *viewController = [[ViewController alloc] initWithNibName:@"ViewController" bundle:[NSBundle mainBundle]];
     
-    /**
-     3、用上面创建的视图控制器来做窗口的根视图控制器，然后使窗口成为主窗口并显示出来：
-     */
+    //3、设置窗口的根视图控制器：
     self.window.rootViewController = viewController;
+    
+    //4、使window成为主窗口并显示出来：
     [self.window makeKeyAndVisible];
     
     return YES;
